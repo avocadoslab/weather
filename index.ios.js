@@ -25,7 +25,7 @@ var Weather = React.createClass({
   render: function() {
     return <View style={styles.container}> 
       <MapView
-        annotations={[this.state.pin]} 
+        annotations={[this.state.pin]}
         onRegionChangeComplete={this.onRegionChangeComplete}
         style={styles.map}>
       </MapView>
@@ -45,7 +45,7 @@ var Weather = React.createClass({
     });
     Api(region.latitude, region.longitude)
       .then((data) => {
-        console.log(data);
+        //console.log(data);
         this.setState(data);
       });
   }
